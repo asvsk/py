@@ -1,0 +1,105 @@
+Task 1
+
+1.1
+
+ def my_reduce(func,seq):
+        i = seq[0]
+        for j in seq[1:]:
+            i = func(i,j)
+        return i
+
+1.2
+
+def my_filter(func,seq):
+    l= []
+    for i in seq:
+        if func(i):
+            l.append(i)
+    return l
+
+
+2
+
+l = ['x','y','z']
+
+output = [ i*j for i in l for j in range(1,5)]
+
+
+l = ['x','y','z']
+
+output = [ i*j  for j in range(1,5) for i in l]
+
+
+[j for i in range(2,5) for j in range(i,i+3)]
+
+
+[[ i for i in range(j,j+4)] for j in range(2,6)]
+
+[(j,i) for i in range(1,4) for j in range(1,4)]
+
+
+
+3
+
+
+def longestWord(l):
+    max=0
+    ans=""
+    for i in l:
+        if len(i)>max:
+            max= len(i)
+            ans= i
+    return ans
+
+
+Task 2
+
+1.1
+
+class Triangle:
+    def __init__(self,a,b,c):
+        self.a=a
+        self.b=b
+        self.c=c
+        
+class Area(Triangle):
+    def area(self):
+        s= (self.a+self.b+self.c)/2
+        area = (s*(s-self.a)*(s-self.b)*(s-self.c)) ** 0.5
+        return area
+
+c = Triangle(3,4,5)
+
+Area.area(c)
+
+
+1.2
+
+def filter_long_words(l,n):
+    l=[]
+    for i in l:
+        if len(i)>n :
+            l.append(i)
+    return l
+    
+
+
+
+2.1
+
+def length(l):
+    m=[]
+    for i in l:
+        m.append(len(i))
+    return m
+
+
+2.2
+
+def isvowel(s):
+    v= ['a','e','i','o','u']
+    
+    if s.lower() in v:
+        return True
+    else:
+        return False
