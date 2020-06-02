@@ -1,0 +1,29 @@
+Task 1
+
+def division():
+    return 5/0
+
+try:
+    division()
+except ZeroDivisionError as z:
+    print("Why do you want to divide a number by ZERO!!")
+except:
+    print("other exception")
+
+
+2.
+
+subject = ["Americans", "Indians"]
+verb = ["Play", "watch"]
+obj = ["Baseball","cricket"]
+
+sentence = [(s+" "+ v + " " + o) for s in subject for v in verb for o in obj]
+print('\n'.join(sentence))
+
+
+Task 2
+
+import numpy as np
+x = np.array([1,2,3,4,5])
+N = 4
+np.vander(x,N)
